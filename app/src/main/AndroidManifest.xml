@@ -27,12 +27,52 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
         </activity>
-        <activity android:name=".Login"
+        <activity
+            android:name=".Login"
             android:label="Masuk"
             android:parentActivityName=".MainActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Menu"
+            android:label="Menu"
+            android:parentActivityName=".MainActivity">
+        <meta-data
+            android:name="android.support.PARENT_ACTIVITY"
+            android:value=".MainActivity" />
+        </activity>
+        <activity
+            android:name=".Search"
+            android:label="Search"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity
+            android:name=".List"
+            android:label="List"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity
+            android:name=".Profil"
+            android:label="Profil"
+            android:parentActivityName=".Menu">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Menu" />
+        </activity>
+        <activity android:name=".MyQR"
+            android:label="MyQR"
+            android:parentActivityName=".Profil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profil" />
         </activity>
     </application>
 

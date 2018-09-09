@@ -1,10 +1,13 @@
 package com.alriftech.kenalankuy;
 
+import android.app.Application;
+
 public class User {
 //    public String NIM;
     public String nama_lengkap;
     public String kota;
     public String password;
+//    private String NIM;
 
     public User() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)

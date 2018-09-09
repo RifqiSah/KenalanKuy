@@ -2,7 +2,12 @@ package com.alriftech.kenalankuy;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import com.journeyapps.barcodescanner.CaptureActivity;
 
-public class MyQR extends CaptureActivity {
+public class MyQR extends AppCompatActivity {
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_my_qr);
+    }
 }

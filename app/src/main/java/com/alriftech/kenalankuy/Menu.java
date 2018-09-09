@@ -28,9 +28,10 @@ public class Menu extends AppCompatActivity {
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
                 integrator.setPrompt("Scan QR Code");
                 integrator.setCameraId(0);
-                integrator.setBeepEnabled(false);
+                integrator.setBeepEnabled(true);
                 integrator.setOrientationLocked(true);
                 integrator.setBarcodeImageEnabled(false);
+                integrator.setCaptureActivity(Search.class);
                 integrator.initiateScan();
             }
         });
@@ -51,6 +52,7 @@ public class Menu extends AppCompatActivity {
             super.onActivityResult(requestCode, resultCode, data);
         }
     }
+
 //    public void Search(View v){
 //        Intent i = new Intent(getApplicationContext(), Search.class);
 //        startActivity(i);

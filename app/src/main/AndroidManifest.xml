@@ -46,12 +46,10 @@
         </activity>
         <activity
             android:name=".Search"
-            android:label="Search"
-            android:parentActivityName=".Menu">
-            <meta-data
-                android:name="android.support.PARENT_ACTIVITY"
-                android:value=".Menu" />
-        </activity>
+            android:screenOrientation="portrait"
+            android:stateNotNeeded="true"
+            android:theme="@style/zxing_CaptureTheme"
+            android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
             android:name=".List"
             android:label="List"
@@ -68,11 +66,14 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value=".Menu" />
         </activity>
-        <activity android:name=".MyQR"
-            android:screenOrientation="portrait"
-            android:stateNotNeeded="true"
-            android:theme="@style/zxing_CaptureTheme"
-            android:windowSoftInputMode="stateAlwaysHidden"></activity>
+        <activity
+            android:name=".MyQR"
+            android:label="MyQR"
+            android:parentActivityName=".Profil">
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value=".Profil" />
+        </activity>
     </application>
 
 </manifest>

@@ -26,7 +26,7 @@ public class Menu extends AppCompatActivity {
             public void onClick(View view) {
                 IntentIntegrator integrator = new IntentIntegrator(activity);
                 integrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE_TYPES);
-                integrator.setPrompt("Scan QR Code Teman");
+                integrator.setPrompt("Scan QR Code Teman Anda");
                 integrator.setCameraId(0);
                 integrator.setBeepEnabled(true);
                 integrator.setOrientationLocked(true);

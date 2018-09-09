@@ -9,6 +9,11 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.Toast;
 
+import com.google.firebase.database.DataSnapshot;
+import com.google.firebase.database.DatabaseError;
+import com.google.firebase.database.DatabaseReference;
+import com.google.firebase.database.FirebaseDatabase;
+import com.google.firebase.database.ValueEventListener;
 import com.google.zxing.integration.android.IntentIntegrator;
 import com.google.zxing.integration.android.IntentResult;
 
@@ -45,7 +50,7 @@ public class Menu extends AppCompatActivity {
                 Toast.makeText(this, "You cancelled the scanning", Toast.LENGTH_LONG).show();
             }
             else {
-                Toast.makeText(this, result.getContents(),Toast.LENGTH_LONG).show();
+                getDetail(result.getContents());
             }
         }
         else {
@@ -53,10 +58,26 @@ public class Menu extends AppCompatActivity {
         }
     }
 
-//    public void Search(View v){
-//        Intent i = new Intent(getApplicationContext(), Search.class);
-//        startActivity(i);
-//    }
+    public void getDetail(final String NIM){
+        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
+
+        database.addListenerForSingleValueEvent(new ValueEventListener() {
+            @Override
+            public void onDataChange(DataSnapshot snapshot) {
+                if (snapshot.child("users").child(NIM).exists()) {
+                    User user = snapshot.child("users").child(NIM).getValue(User.class);
+                    Toast.makeText(Menu.this, user.nama_lengkap + " telah berhasil ditemukan!", Toast.LENGTH_SHORT).show();
+                } else {
+                    Toast.makeText(Menu.this, "Akun tidak ditemukan! Silahkan coba lagi.", Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onCancelled(DatabaseError databaseError) {
+
+            }
+        });
+    }
 
     public void List(View v){
         Intent i = new Intent(getApplicationContext(), List.class);

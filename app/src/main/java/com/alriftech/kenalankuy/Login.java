@@ -1,5 +1,6 @@
 package com.alriftech.kenalankuy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -42,8 +43,12 @@ public class Login extends AppCompatActivity {
             public void onDataChange(DataSnapshot snapshot) {
                 if (snapshot.child("users").child(NIM).exists()) {
                     User user = snapshot.child("users").child(NIM).getValue(User.class);
-                    if (user.password.equals(password))
+                    if (user.password.equals(password)){
                         Toast.makeText(Login.this, user.nama_lengkap + " telah berhasil masuk!", Toast.LENGTH_SHORT).show();
+                        Intent i = new Intent(getApplicationContext(),Menu.class);
+                        i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                        startActivity(i);
+                    }
                     else
                         Toast.makeText(Login.this, "Password salah!", Toast.LENGTH_SHORT).show();
                 } else {

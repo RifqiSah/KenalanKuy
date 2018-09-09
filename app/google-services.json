@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "968414079911",
+    "firebase_url": "https://kenalankuy.firebaseio.com",
+    "project_id": "kenalankuy",
+    "storage_bucket": "kenalankuy.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:968414079911:android:865cccb294ad3bc3",
+        "android_client_info": {
+          "package_name": "com.alriftech.kenalankuy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "968414079911-oouj9hu8f6g8gcdav51uu8ec6o2fk1ps.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.alriftech.kenalankuy",
+            "certificate_hash": "d991e2f57d39140f8df6d228249fbafe4ba11948"
+          }
+        },
+        {
+          "client_id": "968414079911-js0ioj5ttk2f4hhehab4hpucgf7jq6k6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDfMGonKPzBZPYkoVXTDKRlIMK1P9Rs9JM"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "968414079911-js0ioj5ttk2f4hhehab4hpucgf7jq6k6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

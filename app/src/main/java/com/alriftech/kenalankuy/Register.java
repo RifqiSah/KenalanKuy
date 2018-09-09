@@ -1,5 +1,6 @@
 package com.alriftech.kenalankuy;
 
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.text.InputFilter;
@@ -71,6 +72,10 @@ public class Register extends AppCompatActivity {
                     database.child("users").child(NIM).setValue(user);
 
                     Toast.makeText(Register.this, NIM + " berhasil didaftarkan!", Toast.LENGTH_SHORT).show();
+
+                    Intent i = new Intent(getApplicationContext(), MainActivity.class);
+                    i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
+                    startActivity(i);
                 }
             }
 

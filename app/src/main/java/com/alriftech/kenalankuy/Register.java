@@ -62,13 +62,13 @@ public class Register extends AppCompatActivity {
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                if (snapshot.child(NIM).exists()) {
+                if (snapshot.child("users").child(NIM).exists()) {
 //                    User user = snapshot.child(NIM).getValue(User.class);
 //                    Toast.makeText(Register.this, user.getNama_lengkap(), Toast.LENGTH_SHORT).show();
                     Toast.makeText(Register.this, NIM + " telah terdaftar, silahkan login untuk memulai sesi!", Toast.LENGTH_SHORT).show();
                 } else {
                     User user = new User(nama, kota, password);
-                    database.child(NIM).setValue(user);
+                    database.child("users").child(NIM).setValue(user);
 
                     Toast.makeText(Register.this, NIM + " berhasil didaftarkan!", Toast.LENGTH_SHORT).show();
                 }

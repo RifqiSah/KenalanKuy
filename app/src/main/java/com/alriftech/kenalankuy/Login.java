@@ -40,8 +40,8 @@ public class Login extends AppCompatActivity {
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
-                if (snapshot.child(NIM).exists()) {
-                    User user = snapshot.child(NIM).getValue(User.class);
+                if (snapshot.child("users").child(NIM).exists()) {
+                    User user = snapshot.child("users").child(NIM).getValue(User.class);
                     if (user.password.equals(password))
                         Toast.makeText(Login.this, user.nama_lengkap + " telah berhasil masuk!", Toast.LENGTH_SHORT).show();
                     else

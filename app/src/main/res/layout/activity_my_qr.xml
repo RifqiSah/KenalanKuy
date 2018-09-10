@@ -8,10 +8,25 @@
 
     <ImageView
         android:id="@+id/image"
-        android:layout_width="200dp"
-        android:layout_height="200dp"
-        android:layout_centerInParent="true"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="61dp"
         app:srcCompat="@drawable/ic_launcher_background"
         tools:layout_editor_absoluteX="92dp"
         tools:layout_editor_absoluteY="155dp" />
+
+    <TextView
+        android:id="@+id/txtNimQR"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="100dp"
+        android:text="NIM"
+        android:textSize="30dp"
+        android:textColor="#000"
+        android:textAlignment="center"
+        android:textStyle="bold"/>
 </RelativeLayout>

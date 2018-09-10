@@ -59,14 +59,21 @@ public class Menu extends AppCompatActivity {
     }
 
     public void getDetail(final String NIM){
-        DatabaseReference database = FirebaseDatabase.getInstance().getReference();
-
+        final DatabaseReference database = FirebaseDatabase.getInstance().getReference();
         database.addListenerForSingleValueEvent(new ValueEventListener() {
             @Override
             public void onDataChange(DataSnapshot snapshot) {
                 if (snapshot.child("users").child(NIM).exists()) {
                     User user = snapshot.child("users").child(NIM).getValue(User.class);
-                    Toast.makeText(Menu.this, user.nama_lengkap + " telah berhasil ditemukan!", Toast.LENGTH_SHORT).show();
+                    final Session globalVariable = (Session)getApplicationContext();
+
+                    String NIM_Asli = globalVariable.getNIM();
+                    String NIM_Tujuan = NIM;
+
+                    database.child("users").child(NIM_Asli).child("friends").child(NIM_Tujuan).setValue(true); // Untuk sendiri
+                    database.child("users").child(NIM_Tujuan).child("friends").child(NIM_Asli).setValue(true); // Untuk tujuan
+
+                    Toast.makeText(Menu.this, user.nama_lengkap + " telah ditambahkan ke daftar teman Anda!", Toast.LENGTH_SHORT).show();
                 } else {
                     Toast.makeText(Menu.this, "Akun tidak ditemukan! Silahkan coba lagi.", Toast.LENGTH_SHORT).show();
                 }

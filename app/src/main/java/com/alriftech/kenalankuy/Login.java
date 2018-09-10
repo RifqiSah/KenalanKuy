@@ -45,7 +45,12 @@ public class Login extends AppCompatActivity {
                     User user = snapshot.child("users").child(NIM).getValue(User.class);
                     if (user.password.equals(password)){
                         Toast.makeText(Login.this, user.nama_lengkap + " telah berhasil masuk!", Toast.LENGTH_SHORT).show();
-                        Intent i = new Intent(getApplicationContext(),Menu.class);
+
+                        // Set variabel global
+                        final Session globalVariable = (Session)getApplicationContext();
+                        globalVariable.setNIM(NIM);
+
+                        Intent i = new Intent(getApplicationContext(), Menu.class);
                         i.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
                         startActivity(i);
                     }

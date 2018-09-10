@@ -3,6 +3,7 @@
     package="com.alriftech.kenalankuy">
 
     <application
+        android:name="com.alriftech.kenalankuy.Session"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -10,7 +11,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".List"
+            android:name=".Splash"
             android:theme="@style/AppThemeNoActionBar">
 
         </activity>
@@ -34,12 +35,7 @@
         </activity>
         <activity
             android:name=".Menu"
-            android:label="Menu"
-            android:parentActivityName=".MainActivity"
-            >
-        <meta-data
-            android:name="android.support.PARENT_ACTIVITY"
-            android:value=".MainActivity" />
+            android:label="Dasbor">
         </activity>
         <activity
             android:name=".Search"
@@ -48,7 +44,7 @@
             android:theme="@style/zxing_CaptureTheme"
             android:windowSoftInputMode="stateAlwaysHidden"></activity>
         <activity
-            android:name=".Splash"
+            android:name=".List"
             android:label="Daftar Teman"
             android:parentActivityName=".Menu">
             <intent-filter>

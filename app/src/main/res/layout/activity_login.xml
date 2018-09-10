@@ -11,7 +11,6 @@
         android:id="@+id/btnRegisterAkun"
         style="@style/Widget.AppCompat.Button.Colored"
         android:background="@drawable/buttonshape"
-        android:textColor="#ffffff"
         android:shadowColor="#ffffff"
         android:layout_width="336dp"
         android:layout_height="60dp"

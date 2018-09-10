@@ -32,6 +32,16 @@ public class Login extends AppCompatActivity {
         String NIM = txtNIM.getText().toString().trim();
         String password = txtPassword.getText().toString().trim();
 
+        if (NIM.equals("")) {
+            txtNIM.setError( "Harap isi NIM Anda terlebih dahulu!" );
+            return;
+        }
+
+        if (password.equals("")) {
+            txtPassword.setError( "Harap isi password Anda terlebih dahulu!" );
+            return;
+        }
+
         cekUser(NIM, password);
     }
 

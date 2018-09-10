@@ -1,14 +1,17 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:paddingLeft="16dp"
-    android:paddingRight="16dp" >
+    android:orientation="vertical"
+    android:background="@drawable/bg3">
 
     <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:id="@+id/bt_search"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="55dp"
+        android:background="@drawable/buttonshape"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="149dp"
@@ -16,20 +19,25 @@
         android:text="Search" />
 
     <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_marginBottom="10dp"
         android:id="@+id/bt_list"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="55dp"
+        android:background="@drawable/buttonshape"
         android:layout_centerInParent="true"
         android:onClick="List"
         android:text="List" />
 
     <Button
+        android:layout_gravity="center_horizontal"
         android:id="@+id/bt_profil"
-        android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_width="265dp"
+        android:layout_height="55dp"
+        android:background="@drawable/buttonshape"
         android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
         android:layout_marginBottom="149dp"
         android:onClick="Profil"
         android:text="Profil" />
-</RelativeLayout>
+</LinearLayout>

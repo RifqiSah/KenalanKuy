@@ -4,11 +4,15 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/bg3"
     tools:context=".Login">
 
     <Button
         android:id="@+id/btnRegisterAkun"
         style="@style/Widget.AppCompat.Button.Colored"
+        android:background="@drawable/buttonshape"
+        android:textColor="#ffffff"
+        android:shadowColor="#ffffff"
         android:layout_width="336dp"
         android:layout_height="60dp"
         android:layout_alignParentBottom="true"
@@ -16,10 +20,12 @@
         android:layout_marginBottom="23dp"
         android:onClick="Login"
         android:text="Masuk"
-        android:textColor="#FFF" />
+        />
 
     <EditText
         android:id="@+id/txtNIMLogin"
+        android:textColor="#ffffff"
+        android:shadowColor="#ffffff"
         android:layout_width="321dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -34,6 +40,8 @@
 
     <EditText
         android:id="@+id/txtPasswordLogin"
+        android:textColor="#ffffff"
+        android:shadowColor="#ffffff"
         android:layout_width="320dp"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

@@ -1,6 +1,7 @@
 package com.alriftech.kenalankuy;
 
 import android.content.Context;
+import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -45,11 +46,19 @@ public class List extends AppCompatActivity {
             {
                 String value = (String)adapter.getItemAtPosition(position);
                 String NIM = value.substring(0, 9);
-                Toast.makeText(List.this, NIM, Toast.LENGTH_SHORT).show();
+
+                // Toast.makeText(List.this, NIM, Toast.LENGTH_SHORT).show();
+
+                Intent i = new Intent(getApplicationContext(), Profil.class);
+                i.putExtra("NIM", NIM);
+                startActivity(i);
             }
         });
 
-        loadFriend("H1D015004");
+        final Session globalVariable = (Session)getApplicationContext();
+        final String NIM  = globalVariable.getNIM();
+
+        loadFriend(NIM);
     }
 
     private void loadFriend(final String NIM) {
@@ -57,7 +66,7 @@ public class List extends AppCompatActivity {
          final ArrayList<String> arrayList;
 
          arrayList = new ArrayList<String>();
-         adapter = new ArrayAdapter<String>(getApplicationContext(), android.R.layout.simple_list_item_1, arrayList);
+         adapter = new ArrayAdapter<String>(getApplicationContext(), R.layout.blacktext, arrayList);
 
          lstTeman.setAdapter(adapter);
 
